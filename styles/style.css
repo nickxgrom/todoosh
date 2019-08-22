@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: #333333;
+    max-width: 1920px;
+    height: 200px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.logo{
+    text-align: center;
+    color: #ffffff;
+}
+
+#inp{
+    border-radius: 30px;
+    padding: 10px;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 30px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #333333;
+}
+
+.task{
+    width: 100%;
+    font-size: 30px;
+    padding: 10px 50px  10px 50px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    color: #333333
+}
