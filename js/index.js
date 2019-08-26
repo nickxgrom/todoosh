@@ -14,17 +14,37 @@ taskInput.addEventListener('keypress', (key) => {
 function addTask(inputText) {
     var field = document.querySelector('.field'),
         task = document.createElement('div'),
-        elemTxt = document.createTextNode(inputText),
-        completeCheckBox = document.createElement('input');
+        taskNode = document.createElement('div'),
+        delTask = document.createElement('input'),
+        completeCheckBox = document.createElement('input'),
+        elemTxt = document.createTextNode(inputText);
+
+    taskNode.className = 'task-node';
+    delTask.type = 'button';
+    delTask.className = 'del-btn';
+    completeCheckBox.className = 'complete-checkbox';
     completeCheckBox.type = 'checkbox';
+
+    taskNode.append(elemTxt);
     task.className = 'task';
     task.append(completeCheckBox);
-    task.append(elemTxt);
-    // taskComplete();
-    field.append(task);
+    task.append(taskNode);
+    task.append(delTask);
+    field.prepend(task);
+    checkBoxAction();
 }
 
-// function taskComplete() {
-//     let completeCheckBox = document.createElement('input');
 
-// }
+
+function checkBoxAction(){
+    let chbox = document.querySelectorAll('.complete-checkbox');
+    chbox.forEach((elem) => {
+        elem.addEventListener('click', function() {
+            if (this.checked) {
+                this.parentNode.classList.add('complete');
+            } else {
+                this.parentNode.classList.remove('complete');
+            }  
+         });    
+    })
+}

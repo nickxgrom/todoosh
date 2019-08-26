@@ -17,6 +17,7 @@ body{
 
 #inp{
     border-radius: 30px;
+    outline: none;
     padding: 10px;
     width: 100%;
     padding-left: 10px;
@@ -29,10 +30,22 @@ body{
 .task{
     width: 100%;
     font-size: 30px;
-    padding: 10px 50px  10px 50px;
+    padding: 10px 50px  10px 20px;
     border-radius: 30px;
     background-color: #fff;
     box-sizing: border-box;
     margin-bottom: 5px;
-    color: #333333
+    color: #333333;
+    word-wrap: break-word;
+    justify-content: space-between;
+    display: flex;
+}
+
+.complete{
+    text-decoration: line-through;
+    color: #929292;
+}
+
+.task-node{
+    width: 95%;
 }
