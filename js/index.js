@@ -32,11 +32,10 @@ function addTask(inputText) {
     task.append(delTask);
     field.prepend(task);
     checkBoxAction();
+    console.log(document.querySelectorAll('.task').length - document.querySelectorAll('.complete').length -1)
 }
 
-
-
-function checkBoxAction(){
+function checkBoxAction() {
     let chbox = document.querySelectorAll('.complete-checkbox');
     chbox.forEach((elem) => {
         elem.addEventListener('click', function() {
@@ -45,6 +44,7 @@ function checkBoxAction(){
             } else {
                 this.parentNode.classList.remove('complete');
             }  
+            console.log(document.querySelectorAll('.task').length - document.querySelectorAll('.complete').length -1);
          });    
-    })
+    })  
 }

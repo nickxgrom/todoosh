@@ -8,9 +8,20 @@
 <body>
     <div class="container">
         <h1 class="logo">todoosh</h1>
-        <input type="text" id="inp" autocomplete="off">
+        <input type="text" id="inp" autocomplete="off" placeholder="type your task here...">
         <div class="field">
         </div>
+
+        <div class="task">
+            <div class="active-items"></div>
+            <div class="act-btn">
+                <input type="button" class="btn btn-complete" value="complete">
+                <input type="button" class="btn btn-all" value="all">
+                <input type="button" class="btn btn-active" value="active">
+            </div>
+            <input type="button" class="btn btn-clear" value="clear completed">
+        </div>
+        
     </div>
     <script src="./js/index.js"></script>
 </body>
